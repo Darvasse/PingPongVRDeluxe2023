@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallPhysics : MonoBehaviour
 {
-    // Start is called before the first frame update
+    /*// Start is called before the first frame update
     void Start()
     {
         
@@ -18,11 +18,11 @@ public class BallPhysics : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         Vector3 newAngle=  -ProcessAngle();
-        collider.gameObject.GetComponent<Rigidbody>().MovePosition();
+        //collider.gameObject.GetComponent<Rigidbody>().MovePosition();
     }
     public Vector3 ProcessAngle()
     {
-        Vector3 res;
+        Vector3 res = 10;
         Vector3 vel = gameObject.GetComponent<Rigidbody>().velocity;
         return res;
     }
@@ -31,5 +31,5 @@ public class BallPhysics : MonoBehaviour
         Vector3 res= gameObject.GetComponent<Rigidbody>().velocity;
         res = res * 0.9f;
         return res;
-    }
+    }*/
 }
