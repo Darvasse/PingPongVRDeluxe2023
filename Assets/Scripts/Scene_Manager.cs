@@ -19,7 +19,7 @@ public class Scene_Manager : MonoBehaviour
     public static Scene_Manager instance;
     private SceneID currentSceneID;
     private SceneID lastSceneID;
-    private void Awake()
+    public void Awake()
     {
         if (instance != null)
         {
