@@ -4,39 +4,39 @@ using UnityEngine;
 
 public class Main_Menu_Travel : MonoBehaviour
 {
-    
+    public string LevelName;
     public void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "Main Camera")
         {
             switch (gameObject.name)
             {
-                case "Alex":
+                case "SpherePupitreAlex":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.Alex_Scene);
                         break;
                     }
-                case "Axel":
+                case "SpherePupitreAxel":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.Alex_Scene);
                         break;
                     }
-                case "AI":
+                case "SpherePupitreAI":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.AIVersus);
                         break;
                     }
-                case "Sahel":
+                case "SpherePupitreSahel":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.Sahel_Scene);
                         break;
                     }
-                case "Carlos":
+                case "SpherePupitreCarlos":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.Carlos_Scene);
                         break;
                     }
-                case "Solo":
+                case "SpherePupitreSolo":
                     {
                         Scene_Manager.instance.setOtherLevel(SceneID.SceneDesert);
                         break;
