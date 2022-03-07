@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Solo_Game : MonoBehaviour
 {
+    public int Solo_Score=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,12 @@ public class Solo_Game : MonoBehaviour
     {
         
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Wall")
+        {
+            Solo_Score += 1;
+        }
+    }
+
 }
