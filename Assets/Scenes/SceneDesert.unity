@@ -2947,6 +2947,7 @@ GameObject:
   - component: {fileID: 1636233105}
   - component: {fileID: 1636233107}
   - component: {fileID: 1636233106}
+  - component: {fileID: 1636233108}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2993,7 +2994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: 112123132
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3106,6 +3107,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1636233108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636233104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa9389174334294cbfa4ce2cc91b4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: {fileID: 1636233106}
+  isSoloGame: 0
+  latest_SoloScore: 0
 --- !u!1 &1668235299
 GameObject:
   m_ObjectHideFlags: 0
