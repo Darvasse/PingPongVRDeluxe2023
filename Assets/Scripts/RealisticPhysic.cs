@@ -35,7 +35,7 @@ public class RealisticPhysic : MonoBehaviour
             float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce();
             if (racketForce > 0)
             {
-                GetComponent<Rigidbody>().velocity = direction * (Mathf.Max(speed, minVelocity) / 4) * racketForce;
+                GetComponent<Rigidbody>().velocity = direction * (Mathf.Max(speed, minVelocity) / 7) * racketForce;
             }
             else
             {
