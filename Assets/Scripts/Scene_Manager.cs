@@ -202,6 +202,16 @@ public class Scene_Manager : MonoBehaviour
     }
     public SceneID getCurrentSceneID()
     {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "MainMenu": currentSceneID = SceneID.MainMenu;break;
+            case "AIVersusScene": currentSceneID = SceneID.AIVersus; break;
+            case "SceneDesert":currentSceneID = SceneID.SceneDesert;break;
+            case "Alex_Scene": currentSceneID = SceneID.Alex_Scene;break;
+            case "Axel_Scene": currentSceneID = SceneID.Axel_Scene;break;
+            case "Carlos_Scene": currentSceneID = SceneID.Carlos_Scene;break;
+            case "Sahel_Scene": currentSceneID = SceneID.Sahel_Scene;break;
+        }
         return currentSceneID;
     }
 }
