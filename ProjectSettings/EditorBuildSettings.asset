@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: bbd62718ddabbc74c96006eebea8b293
+  - enabled: 1
+    path: Assets/Scenes/Carlos_Scene.unity
+    guid: 2b74eac8c7032b647b792f47c41044f9
+  - enabled: 1
+    path: Assets/Scenes/BeerPong.unity
+    guid: d0d095fd807d0a746a70ca7bb913d7ed
+  - enabled: 1
+    path: Assets/Scenes/SceneDesert.unity
+    guid: 9c57e25e4e87d9f4db08ea18b5ba45aa
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 402598e61e9fdab43870b2db067f30a2, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f236dd1c2e41bb04992fe5b961275d8c, type: 2}

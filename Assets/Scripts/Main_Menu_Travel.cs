@@ -26,9 +26,9 @@ public class Main_Menu_Travel : MonoBehaviour
                         Scene_Manager.instance.setOtherLevel(SceneID.AIVersus);
                         break;
                     }
-                case "SpherePupitreSahel":
+                case "SpherePupitreBeerPong":
                     {
-                        Scene_Manager.instance.setOtherLevel(SceneID.Sahel_Scene);
+                        Scene_Manager.instance.setOtherLevel(SceneID.BeerPong);
                         break;
                     }
                 case "SpherePupitreCarlos":

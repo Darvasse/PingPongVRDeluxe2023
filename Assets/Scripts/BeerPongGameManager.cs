@@ -8,6 +8,7 @@ public class BeerPongGameManager : MonoBehaviour
     public TextMesh ScoreTxt;
     int nbCups= 10;
     public GameObject CupSet;
+    public Scene_Manager sm;
     void Start()
     {
         nbCups = CupSet.GetComponent<Transform>().childCount;
@@ -18,5 +19,11 @@ public class BeerPongGameManager : MonoBehaviour
     {
         nbCups = CupSet.GetComponent<Transform>().childCount;
         ScoreTxt.text = nbCups + " verres restants";
+        if(nbCups == 0)
+        {
+            sm.setOtherLevel(SceneID.MainMenu);
+        }
+        
+
     }
 }

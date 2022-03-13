@@ -11,7 +11,7 @@ public enum SceneID
     Alex_Scene = 3,
     Axel_Scene = 4,
     Carlos_Scene = 5,
-    Sahel_Scene = 6
+    BeerPong = 6
 }
 
 public class Scene_Manager : MonoBehaviour
@@ -74,8 +74,8 @@ public class Scene_Manager : MonoBehaviour
                 }
             case 6:
                 {
-                    SceneManager.LoadScene("Sahel_Scene");
-                    currentSceneID = SceneID.Sahel_Scene;
+                    SceneManager.LoadScene("BeerPong_Scene");
+                    currentSceneID = SceneID.BeerPong;
                     break;
                 }
             default: 
@@ -125,10 +125,10 @@ public class Scene_Manager : MonoBehaviour
                     currentSceneID = SceneID.Carlos_Scene;
                     break;
                 }
-            case "Sahel_Scene":
+            case "BeerPong_Scene":
                 {
-                    SceneManager.LoadScene("Sahel_Scene");
-                    currentSceneID = SceneID.Sahel_Scene;
+                    SceneManager.LoadScene("BeerPong_Scene");
+                    currentSceneID = SceneID.BeerPong;
                     break;
                 }
             default:
@@ -178,10 +178,10 @@ public class Scene_Manager : MonoBehaviour
                     currentSceneID = SceneID.Carlos_Scene;
                     break;
                 }
-            case SceneID.Sahel_Scene:
+            case SceneID.BeerPong:
                 {
-                    SceneManager.LoadScene("Sahel_Scene");
-                    currentSceneID = SceneID.Sahel_Scene;
+                    SceneManager.LoadScene("BeerPong_Scene");
+                    currentSceneID = SceneID.BeerPong;
                     break;
                 }
             default:
@@ -210,7 +210,7 @@ public class Scene_Manager : MonoBehaviour
             case "Alex_Scene": currentSceneID = SceneID.Alex_Scene;break;
             case "Axel_Scene": currentSceneID = SceneID.Axel_Scene;break;
             case "Carlos_Scene": currentSceneID = SceneID.Carlos_Scene;break;
-            case "Sahel_Scene": currentSceneID = SceneID.Sahel_Scene;break;
+            case "BeerPong_Scene": currentSceneID = SceneID.BeerPong;break;
         }
         return currentSceneID;
     }
