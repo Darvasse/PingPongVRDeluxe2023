@@ -20,7 +20,7 @@ public class Main_Menu_Travel : MonoBehaviour
                     }
                 case "SpherePupitreAxel":
                     {
-                        Scene_Manager.instance.setOtherLevel(SceneID.Alex_Scene);
+                        Scene_Manager.instance.setOtherLevel(SceneID.Axel_Scene);
                         break;
                     }
                 case "SpherePupitreAI":
