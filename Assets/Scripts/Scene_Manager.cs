@@ -74,7 +74,7 @@ public class Scene_Manager : MonoBehaviour
                 }
             case 6:
                 {
-                    SceneManager.LoadScene("BeerPong_Scene");
+                    SceneManager.LoadScene("BeerPong");
                     currentSceneID = SceneID.BeerPong;
                     break;
                 }
@@ -127,7 +127,7 @@ public class Scene_Manager : MonoBehaviour
                 }
             case "BeerPong_Scene":
                 {
-                    SceneManager.LoadScene("BeerPong_Scene");
+                    SceneManager.LoadScene("BeerPong");
                     currentSceneID = SceneID.BeerPong;
                     break;
                 }
@@ -180,7 +180,7 @@ public class Scene_Manager : MonoBehaviour
                 }
             case SceneID.BeerPong:
                 {
-                    SceneManager.LoadScene("BeerPong_Scene");
+                    SceneManager.LoadScene("BeerPong");
                     currentSceneID = SceneID.BeerPong;
                     break;
                 }

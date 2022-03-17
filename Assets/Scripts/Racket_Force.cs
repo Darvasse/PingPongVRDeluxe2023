@@ -22,10 +22,6 @@ public class Racket_Force : MonoBehaviour
     [SerializeField]
     private float force;
 
-    [SerializeField]
-    private float translation;
-
-    private bool collisionBool;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +32,6 @@ public class Racket_Force : MonoBehaviour
         lastFrameVelocity = new Vector3(0, 0, 0);
         currentFrameVelocity = new Vector3(0, 0, 0);
         force = 0;
-        translation = 0;
-        collisionBool = false;
     }
 
     // Update is called once per frame
@@ -48,11 +42,7 @@ public class Racket_Force : MonoBehaviour
         lastFrameVelocity = currentFrameVelocity;
         currentFrameVelocity = (currentFramePosition - lastFramePosition) / Time.fixedDeltaTime;
         force = rb.mass * ((currentFrameVelocity.magnitude - lastFrameVelocity.magnitude) / Time.fixedDeltaTime);
-        if (collisionBool == false)
-        {
-            transform.Translate(new Vector3(0, translation, 0));
-            translation += 0.01f;
-        }
+        
     }
 
     public float getForce()
@@ -60,8 +50,4 @@ public class Racket_Force : MonoBehaviour
         return force;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        collisionBool = true;
-    }
 }

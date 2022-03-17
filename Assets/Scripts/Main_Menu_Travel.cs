@@ -5,10 +5,12 @@ using UnityEngine;
 public class Main_Menu_Travel : MonoBehaviour
 {
     public string LevelName;
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerStay(Collider collision)
     {
-        if(collision.gameObject.name == "Main Camera")
+        Debug.Log("EnterSmthg");
+        if (collision.gameObject.name == "Main Camera")
         {
+            Debug.Log("Enter Main Cam");
             switch (gameObject.name)
             {
                 case "SpherePupitreAlex":

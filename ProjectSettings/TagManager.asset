@@ -7,6 +7,7 @@ TagManager:
   - Goal
   - Wall
   - Ball
+  - Racket
   layers:
   - Default
   - TransparentFX
