@@ -20,6 +20,20 @@ public class AI_PinPongBat : Agent
         float randZ = Random.Range(-9f, 9f);
         targetBall.localPosition = new Vector3(randX, randY, randZ);
         transform.localPosition = Vector3.zero;
+        Debug.Log("New Start");
+
+    }
+    public void Update()
+    {
+        if (gameObject.GetComponent<AI_PinPongBat>().StepCount >= 500)
+        {
+            SetReward(-100f);
+            for (int i = 0; i < cubeMeshRenderer.Count - 1; i++)
+            {
+                cubeMeshRenderer[i].material = loseMaterial;
+            }
+            EndEpisode();
+        }
     }
     public override void CollectObservations(VectorSensor sensor)
     {
