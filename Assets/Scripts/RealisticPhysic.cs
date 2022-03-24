@@ -33,13 +33,8 @@ public class RealisticPhysic : MonoBehaviour
         currentFramePosition = transform.position;
         //On initialise le rigidbody de la balle
         rb = GetComponent<Rigidbody>();
-<<<<<<< Updated upstream
         //On initialise la vitesse de la balle
         velocity = rb.velocity;
-=======
-        currentFrameVelocity = rb.velocity;
-        Debug.Log(currentFrameVelocity);
->>>>>>> Stashed changes
         minVelocity = 0;
     }
 
@@ -82,14 +77,8 @@ public class RealisticPhysic : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-<<<<<<< Updated upstream
         var speed = velocity.magnitude;
         var direction = Vector3.Reflect(velocity.normalized, collision.contacts[0].normal);
-=======
-        Debug.Log("Collision");
-        var speed = currentFrameVelocity.magnitude;
-        var direction = Vector3.Reflect(currentFrameVelocity.normalized, collision.contacts[0].normal);
->>>>>>> Stashed changes
         if (collision.gameObject.tag == "Racket")
         {
             float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce();
