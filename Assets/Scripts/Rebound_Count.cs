@@ -28,6 +28,7 @@ public class Rebound_Count : MonoBehaviour
         else if (collision.gameObject.tag == "Ground")
         {
             gameObject.transform.position = new Vector3(-0.21f, 0.68f, 1.31f);
+            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             int winner;
             if((last_hitter.name == "Joueur1"&&table_Hitted)||(last_hitter.name == "Joueur2"&&!table_Hitted))
             {
