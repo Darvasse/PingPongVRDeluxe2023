@@ -6,7 +6,8 @@ public class Rebound_Count : MonoBehaviour
 {
     public int rebound_Counter { get; private set; } = 0;
     // Start is called before the first frame update
-    public GameObject last_hitter;
+    public GameObject last_hitter=null;
+    public GameObject BallPrefab;
     public bool table_Hitted = false;
     void Start()
     {
@@ -27,18 +28,21 @@ public class Rebound_Count : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Ground")
         {
-            gameObject.transform.position = new Vector3(-0.21f, 0.68f, 1.31f);
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            
             int winner;
-            if((last_hitter.name == "Joueur1"&&table_Hitted)||(last_hitter.name == "Joueur2"&&!table_Hitted))
+            if (last_hitter != null)
             {
-                winner = 1;
-            }
-            else
-            {
-                winner = 2;
+                if ((last_hitter.name == "Joueur1" && table_Hitted) || (last_hitter.name == "Joueur2" && !table_Hitted))
+                {
+                    winner = 1;
+                }
+                else
+                {
+                    winner = 2;
+                }
             }
             //Solo_Game.instance.Adding_Point(winner);
+            FindObjectOfType<BallGenerator>().ResetBall();
         }else if(collision.gameObject.tag == "Table")
         {
             table_Hitted = true;
