@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f8fa040c4d53f5f429d4df3b349f7fdb, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -616,7 +616,6 @@ MonoBehaviour:
   lastFramePosition: {x: 0, y: 0, z: 0}
   currentFramePosition: {x: 0, y: 0, z: 0}
   force: 0
-  translation: 0
 --- !u!1 &2038610396
 GameObject:
   m_ObjectHideFlags: 0
