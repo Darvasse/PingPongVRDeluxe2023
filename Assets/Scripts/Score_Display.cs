@@ -11,6 +11,7 @@ public class Score_Display : MonoBehaviour
     public bool isSoloGame;
     public int latest_SoloScore=0,latestDuoScore=0;
     private Solo_Game GameMode;
+    private Rebound_Count ReboundCounter;
     private void Awake()
     {
         if(instance != null)
@@ -27,6 +28,7 @@ public class Score_Display : MonoBehaviour
     {
         test.alignment = TextAlignmentOptions.Center;
         GameMode = FindObjectOfType<Solo_Game>();
+        ReboundCounter = FindObjectOfType<Rebound_Count>();
         if ((int)Scene_Manager.instance.getCurrentSceneID() == 2)
         {
             isSoloGame = true;

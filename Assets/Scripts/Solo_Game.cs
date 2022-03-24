@@ -18,6 +18,7 @@ public class Solo_Game : MonoBehaviour
         {
             instance = this;
         }
+        NewGame();
     }
     
     public void Adding_Point(int pointWinner) 
@@ -34,7 +35,7 @@ public class Solo_Game : MonoBehaviour
     }
     public void NewGame()
     {
-        FindObjectOfType<LeaderBoard>().SaveScore(name, Solo_Score >= Duo_Score ? Solo_Score : Duo_Score);
+        //FindObjectOfType<LeaderBoard>().SaveScore(name, Solo_Score >= Duo_Score ? Solo_Score : Duo_Score);
         Solo_Score = 0;
         Duo_Score = 0;
         Score_Display.instance.UpdateScoreboard();

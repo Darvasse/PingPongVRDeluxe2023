@@ -37,10 +37,14 @@ public class Rebound_Count : MonoBehaviour
             {
                 winner = 2;
             }
-            Solo_Game.instance.Adding_Point(winner);
+            //Solo_Game.instance.Adding_Point(winner);
         }else if(collision.gameObject.tag == "Table")
         {
             table_Hitted = true;
+        }
+        if(collision.gameObject.tag == "Wall")
+        {
+            Solo_Game.instance.Adding_Point(1);
         }
     }
 }
