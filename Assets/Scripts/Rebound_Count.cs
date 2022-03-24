@@ -42,7 +42,11 @@ public class Rebound_Count : MonoBehaviour
                 }
             }
             //Solo_Game.instance.Adding_Point(winner);
-            FindObjectOfType<BallGenerator>().ResetBall();
+            if(Scene_Manager.instance.getCurrentSceneID() == SceneID.SceneDesert)
+            {
+                FindObjectOfType<BallGenerator>().ResetBall();
+            }
+            
         }else if(collision.gameObject.tag == "Table")
         {
             table_Hitted = true;
