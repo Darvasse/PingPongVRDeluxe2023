@@ -11,7 +11,9 @@ public enum SceneID
     Alex_Scene = 3,
     Axel_Scene = 4,
     Carlos_Scene = 5,
-    BeerPong = 6
+    BeerPong = 6,
+    Cannon = 7
+
 }
 
 public class Scene_Manager : MonoBehaviour
@@ -78,6 +80,18 @@ public class Scene_Manager : MonoBehaviour
                     currentSceneID = SceneID.BeerPong;
                     break;
                 }
+
+            case 7:
+                {
+                    SceneManager.LoadScene("Cannon");
+                    currentSceneID = SceneID.Cannon;
+                    break;
+                }
+                {
+                    SceneManager.LoadScene("BeerPong");
+                    currentSceneID = SceneID.BeerPong;
+                    break;
+                }
             default: 
                 { 
                     Debug.LogError("Erreur In SceneLoader"); 
@@ -129,6 +143,12 @@ public class Scene_Manager : MonoBehaviour
                 {
                     SceneManager.LoadScene("BeerPong");
                     currentSceneID = SceneID.BeerPong;
+                    break;
+                }
+            case "Cannon":
+                {
+                    SceneManager.LoadScene("Cannon");
+                    currentSceneID = SceneID.Cannon;
                     break;
                 }
             default:
@@ -184,6 +204,12 @@ public class Scene_Manager : MonoBehaviour
                     currentSceneID = SceneID.BeerPong;
                     break;
                 }
+            case SceneID.Cannon:
+                {
+                    SceneManager.LoadScene("Cannon");
+                    currentSceneID = SceneID.Cannon;
+                    break;
+                }
             default:
                 {
                     Debug.LogError("Erreur In SceneLoader");
@@ -211,6 +237,7 @@ public class Scene_Manager : MonoBehaviour
             case "Axel_Scene": currentSceneID = SceneID.Axel_Scene;break;
             case "Carlos_Scene": currentSceneID = SceneID.Carlos_Scene;break;
             case "BeerPong_Scene": currentSceneID = SceneID.BeerPong;break;
+            case "Cannon": currentSceneID = SceneID.Cannon;break;
         }
         return currentSceneID;
     }

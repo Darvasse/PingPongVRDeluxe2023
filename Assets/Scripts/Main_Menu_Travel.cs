@@ -43,6 +43,11 @@ public class Main_Menu_Travel : MonoBehaviour
                         Scene_Manager.instance.setOtherLevel(SceneID.SceneDesert);
                         break;
                     }
+                case "SpherePupitreCannon":
+                    {
+                        Scene_Manager.instance.setOtherLevel(SceneID.Cannon);
+                        break;
+                    }
             }
         }
     }
