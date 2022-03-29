@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Racket
   - Ground
+  - Table
   layers:
   - Default
   - TransparentFX
