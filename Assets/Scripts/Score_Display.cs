@@ -32,11 +32,13 @@ public class Score_Display : MonoBehaviour
         if ((int)Scene_Manager.instance.getCurrentSceneID() == 2)
         {
             isSoloGame = true;
-            test.text = "Score\n"+ latest_SoloScore.ToString();
+            test.text = "Score\n" + latest_SoloScore.ToString();
+            GameMode.isSoloGame = true;
         }
         else
         {
             isSoloGame = false;
+            GameMode.isSoloGame = false;
         }
     }
 
