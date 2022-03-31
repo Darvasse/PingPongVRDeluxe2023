@@ -25,6 +25,8 @@ public class RealisticPhysic : MonoBehaviour
     [SerializeField]
     public float minVelocity;
 
+    public float limiter; 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,6 +38,7 @@ public class RealisticPhysic : MonoBehaviour
         //On initialise la vitesse de la balle
         velocity = rb.velocity;
         minVelocity = 0;
+        limiter = 7;
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class RealisticPhysic : MonoBehaviour
             if(hit.collider.gameObject.tag == "Racket")
             {
                 //On récupère la force de la raquette
-                float racketForce = hit.collider.gameObject.GetComponent<Racket_Force>().getForce()/3.5f;
+                float racketForce = hit.collider.gameObject.GetComponent<Racket_Force>().getForce() / limiter;
                 //Si cette force est positive
                 if(racketForce > 0)
                 {
@@ -81,7 +84,7 @@ public class RealisticPhysic : MonoBehaviour
         var direction = Vector3.Reflect(velocity.normalized, collision.contacts[0].normal);
         if (collision.gameObject.tag == "Racket")
         {
-            float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce()/3.5f;
+            float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce() / limiter;
             if (racketForce > 0)
             {
                 GetComponent<Rigidbody>().velocity = direction * (Mathf.Max(speed, minVelocity) / 30) * racketForce;
