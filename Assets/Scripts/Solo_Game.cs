@@ -8,6 +8,7 @@ public class Solo_Game : MonoBehaviour
     public int Duo_Score { get; private set; } = 0;
     public static Solo_Game instance;
     public bool isSoloGame = false;
+
     // Start is called before the first frame update
     private void Awake()
     {
