@@ -27,18 +27,17 @@ public class Score_Display : MonoBehaviour
     void Start()
     {
         test.alignment = TextAlignmentOptions.Center;
-        GameMode = FindObjectOfType<Solo_Game>();
         ReboundCounter = FindObjectOfType<Rebound_Count>();
         if ((int)Scene_Manager.instance.getCurrentSceneID() == 2)
         {
             isSoloGame = true;
             test.text = "Score\n" + latest_SoloScore.ToString();
-            GameMode.isSoloGame = true;
+            Solo_Game.instance.isSoloGame = true;
         }
         else
         {
             isSoloGame = false;
-            GameMode.isSoloGame = false;
+            Solo_Game.instance.isSoloGame = false;
         }
     }
 
@@ -46,13 +45,13 @@ public class Score_Display : MonoBehaviour
     {
         if (isSoloGame)
         {
-            latest_SoloScore = GameMode.Solo_Score;
+            latest_SoloScore = Solo_Game.instance.Solo_Score;
             test.text = "Score :\n" + latest_SoloScore;
         }
         else
         {
-            latest_SoloScore = GameMode.Solo_Score;
-            latestDuoScore = GameMode.Duo_Score;
+            latest_SoloScore = Solo_Game.instance.Solo_Score;
+            latestDuoScore = Solo_Game.instance.Duo_Score;
             test.text = "Score :\n" + latest_SoloScore+" : "+latestDuoScore;
         }
         
