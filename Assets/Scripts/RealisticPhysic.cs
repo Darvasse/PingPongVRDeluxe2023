@@ -54,7 +54,7 @@ public class RealisticPhysic : MonoBehaviour
             if(hit.collider.gameObject.tag == "Racket")
             {
                 //On récupère la force de la raquette
-                float racketForce = hit.collider.gameObject.GetComponent<Racket_Force>().getForce();
+                float racketForce = hit.collider.gameObject.GetComponent<Racket_Force>().getForce()/3.5f;
                 //Si cette force est positive
                 if(racketForce > 0)
                 {
@@ -81,7 +81,7 @@ public class RealisticPhysic : MonoBehaviour
         var direction = Vector3.Reflect(velocity.normalized, collision.contacts[0].normal);
         if (collision.gameObject.tag == "Racket")
         {
-            float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce();
+            float racketForce = collision.gameObject.GetComponent<Racket_Force>().getForce()/3.5f;
             if (racketForce > 0)
             {
                 GetComponent<Rigidbody>().velocity = direction * (Mathf.Max(speed, minVelocity) / 30) * racketForce;
