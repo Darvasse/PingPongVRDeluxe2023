@@ -59,18 +59,18 @@ public class RealisticPhysic : MonoBehaviour
                 if(racketForce > 0)
                 {
                     //On applique la force de la raquette sur la balle
-                    rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, 0) / 30) * racketForce;
+                    rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, minVelocity) / 30) * racketForce;
                 }
                 else
                 {
                     //Sinon on applque un force par défaut sur la balle
-                    rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, 0) / 4) * 3;
+                    rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, minVelocity) / 4) * 3;
                 }
             }
             //Sinon on applque un force par défaut sur la balle
             else
             {
-                rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, 0) / 4) * 3;
+                rb.velocity = Vector3.Reflect(velocity, hit.normal) * (Mathf.Max(velocity.magnitude, minVelocity) / 4) * 3;
             }
         }
     }
